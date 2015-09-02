@@ -868,7 +868,6 @@ footer .sbutton {
 }
 /*-[ Bottom Ad in post ]-----------*/
 .bottomad {
-    float: left;
     clear: both;
     margin-top: 20px;
 }
