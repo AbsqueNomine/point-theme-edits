@@ -864,12 +864,13 @@ footer .sbutton {
 .topad {
     clear: both;
     margin-bottom: 10px;
-    max-height: 200px;
+    max-height: 130px;
 }
 /*-[ Bottom Ad in post ]-----------*/
 .bottomad {
     clear: both;
     margin-top: 20px;
+    max-height: 130px;
 }
 /*-[ ad ]---------------------*/
 .ad-300 { width: 100% }
