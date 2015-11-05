@@ -13,11 +13,11 @@
 				<?php } elseif (is_author()) { ?>
 					<span><?php  $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author)); echo $curauth->nickname; _e(" Archive", "mythemeshop"); ?></span> 
 				<?php } elseif (is_day()) { ?>
-					<span><?php _e("Daily Archive:", "mythemeshop"); ?></span> <?php the_time('l, F j, Y'); ?>
+					<span><?php _e("Daily Archive:", "mythemeshop"); ?></span> <?php get_the_date('l, F j, Y'); ?>
 				<?php } elseif (is_month()) { ?>
-					<span><?php _e("Monthly Archive:", "mythemeshop"); ?>:</span> <?php the_time('F Y'); ?>
+					<span><?php _e("Monthly Archive:", "mythemeshop"); ?>:</span> <?php get_the_date('F Y'); ?>
 				<?php } elseif (is_year()) { ?>
-					<span><?php _e("Yearly Archive:", "mythemeshop"); ?>:</span> <?php the_time('Y'); ?>
+					<span><?php _e("Yearly Archive:", "mythemeshop"); ?>:</span> <?php get_the_date('Y'); ?>
 				<?php } ?>
 			</h1>	
 			<?php  $j=0; $i =0; if (have_posts()) : while (have_posts()) : the_post(); ?>
