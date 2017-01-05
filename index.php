@@ -5,7 +5,7 @@
 		<div class="article">
 			<h3 class="frontTitle"><div class="latest"><?php _e('Latest','mythemeshop'); ?></div></h3>
 			<?php  $j=0; $i =0; if (have_posts()) : while (have_posts()) : the_post(); ?>
-				<article class="<?php echo 'pexcerpt'.$i++?> post excerpt <?php echo (++$j % 2 == 0) ? 'last' : ''; ?>">
+				<article class="<?php echo 'pexcerpt'.$i++?> post excerpt <?php echo (++$j % 2 == 0) ? 'last' : '...'; ?>">
 					<?php if (empty($mts_options['mts_full_posts'])) : ?>
 						<?php if ( has_post_thumbnail() ) { ?>
 							<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" rel="nofollow" id="featured-thumbnail">
