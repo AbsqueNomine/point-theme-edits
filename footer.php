@@ -28,7 +28,7 @@
 		</div>
 	<?php }} ?>
 </footer><!--footer-->
-<div class="copyrights">Copyright &copy; 2014-<?php echo date("Y"); ?> <a href="http://www.discovergdl.com">discoverGDL</a></div>
+<div class="copyrights"><?php mts_copyrights_credit(); ?></div>
 <?php wp_footer(); ?>
 </div><!--.main-container-->
 </body>
