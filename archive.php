@@ -13,8 +13,7 @@
 				<?php } elseif (is_author()) { ?>
 					<span><?php $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author)); echo $curauth->nickname; _e(" Archive", "mythemeshop"); ?></span> 
 				<?php } elseif (is_day()) { ?>
-					<span><?php _e("Daily Archive: ",
-					"mythemeshop"); ?></span> <?php wp_title(' | ', true, 'right'); ?> 
+					<span><?php _e("Daily Archive: ", "mythemeshop"); ?></span> <?php wp_title(' | ', true, 'right'); ?> 
 				<?php } elseif (is_month()) { ?>
 					<span><?php _e("Monthly Archive: ", "mythemeshop"); ?></span> <?php wp_title(' | ', true, 'right'); ?>
 				<?php } elseif (is_year()) { ?>
