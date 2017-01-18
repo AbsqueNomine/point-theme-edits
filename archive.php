@@ -11,16 +11,17 @@
 				<?php } elseif (is_search()) { ?> 
 					<span><?php _e("Search Results for:", "mythemeshop"); ?></span> <?php the_search_query(); ?>
 				<?php } elseif (is_author()) { ?>
-					<span><?php  $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author)); echo $curauth->nickname; _e(" Archive", "mythemeshop"); ?></span> 
+					<span><?php $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author)); echo $curauth->nickname; _e(" Archive", "mythemeshop"); ?></span> 
 				<?php } elseif (is_day()) { ?>
-					<span><?php _e("Daily Archive:", "mythemeshop"); ?></span> <?php get_the_date('l, F j, Y'); ?>
+					<span><?php _e("Daily Archive: ",
+					"mythemeshop"); ?></span> <?php wp_title(' | ', true, 'right'); ?> 
 				<?php } elseif (is_month()) { ?>
-					<span><?php _e("Monthly Archive:", "mythemeshop"); ?>:</span> <?php get_the_date('F Y'); ?>
+					<span><?php _e("Monthly Archive: ", "mythemeshop"); ?></span> <?php wp_title(' | ', true, 'right'); ?>
 				<?php } elseif (is_year()) { ?>
-					<span><?php _e("Yearly Archive:", "mythemeshop"); ?>:</span> <?php get_the_date('Y'); ?>
+					<span><?php _e("Yearly Archive:", "mythemeshop"); ?></span> <?php wp_title(' | ', true, 'right'); ?>
 				<?php } ?>
 			</h1>	
-			<?php  $j=0; $i =0; if (have_posts()) : while (have_posts()) : the_post(); ?>
+			<?php $j=0; $i =0; if (have_posts()) : while (have_posts()) : the_post(); ?>
 				<article class="<?php echo 'pexcerpt'.$i++?> post excerpt <?php echo (++$j % 2 == 0) ? 'last' : ''; ?>">
 					<?php if (empty($mts_options['mts_full_posts'])) : ?>
 						<?php if ( has_post_thumbnail() ) { ?>
